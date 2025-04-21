@@ -23,6 +23,7 @@ func NewTaskService(repo repository.TaskRepository, worker *worker.TaskWorker) *
     }
 }
 
+
 func (s *TaskService) CreateTask(ctx context.Context, req *domain.TaskRequest) (string, error) {
 	task := &domain.Task{
 		ID:        generateID(),
@@ -70,3 +71,4 @@ func (s *TaskService) GetTaskResult(ctx context.Context, taskID string) (*domain
 func generateID() string {
 	return uuid.New().String()
 }
+

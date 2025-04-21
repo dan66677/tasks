@@ -70,3 +70,4 @@ func (h *TaskHandler) GetTaskResult(w http.ResponseWriter, r *http.Request) {
 
 	render.JSON(w, r, result)
 }
+
